@@ -1,0 +1,227 @@
+@media screen and (max-width: 768px) {
+    /* app settings  */
+    * {
+        font-family: Montserrat;
+    }
+    body {
+        background-color: rgb(26, 33, 53);
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+    .bg-base-1 {
+        background-color: rgb(32, 40, 61);
+        /* background-color: rgb(39, 48, 70); */
+    }
+    .bg-base-2 {
+        background-color: orange;
+    }
+    .bg-highlight {
+        /* background-color: rgb(99, 99, 114);    */
+        background-color: rgb(52, 58, 64);
+    }
+    .bg-black {
+        background-color: black;
+    }
+    .nav-bar {
+        padding: 0.4em 0;
+    }
+    .nav-bar .brand {
+        margin: 0 0.1em;
+        color: white;
+        font-size: 95%;
+    }
+    .btn:focus, .btn:hover, .btn:active {
+        outline: none !important;
+        box-shadow: none;
+    }
+    input:focus, input:hover {
+        outline: none !important;
+        box-shadow: none;
+    }
+    .navbar-brand {
+        font-family: magneto, cursive !important;
+    }
+    /* kk */
+    .main-menu-button {
+        position: absolute;
+        right: 1em;
+        color: white;
+    }
+    .search-box {
+        padding: 2em 0.8em 1.5em;
+        border: 1px solid lightgreen;
+        background-color: rgb(26, 33, 53);
+        border-radius: 6px;
+        text-align: center;
+        width: 92%;
+        margin: auto;
+        font-size: 90%;
+    }
+    .search-box .caption {
+        font-size: 100%;
+        color: #efefef;
+        font-weight: 200;
+        font-family: Montserrat;
+        border-radius: 6px;
+        margin: 0.5em 0 0;
+        padding: 0.3em;
+    }
+    .search-box input {
+        border-radius: 10px;
+        padding: 0.3em 1em;
+        color: white;
+    }
+    .search-box span {
+        padding: 0.43em 0.6em 0.49em;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-left: -10px;
+    }
+    .search-dropdown {
+        width: 93%;
+        margin: 0.4em auto;
+        padding: 0.3em 1em;
+        display: none;
+    }
+    .search-dropdown label {
+        color: white;
+        font-size: 70%;
+    }
+    .search-dropdown input {
+        color: white;
+        font-size: 70%;
+        border: 0px solid;
+        border-bottom: 1px solid navy;
+        border-radius: 2px;
+    }
+    .banner {
+        color: white;
+        font-size: 105%;
+        line-height: 30px;
+        padding: 0.5em;
+        text-transform: uppercase;
+        width: 100%;
+        margin: auto;
+    }
+    .loading-spinner {
+        color: grey;
+        margin: 40% auto;
+        position: relative;
+        top: 50%;
+    }
+    #home-loading-spinner {
+        margin: 10% auto;
+    }
+    #search-results {
+        border: 1px solid rgb(32, 40, 61);
+        margin: -1.1em auto 0;
+        padding: 0.7em;
+        width: 99%;
+    }
+    .movies-result {
+        margin: 0 auto 1em;
+        color: white;
+        border: 3px solid rgb(0, 0, 5);
+        padding: 0 0 1em;
+        border-radius: 6px;
+    }
+    .movies-result img {
+        width: 98%;
+        margin: 0 1% 0.7em;
+        border: 2px solid red;
+    }
+    #search_alert {
+        color: red;
+        margin-bottom: 1em;
+        padding: 0.4em 0.8em 0.2em;
+        font-size: 90%;
+        border: 1px solid rgb(32, 40, 61);
+        background-color: rgba(144, 238, 144, 0.575);
+        font-family: Montserrat;
+        border-radius: 6px;
+        display: none;
+    }
+    .information {
+        margin: 0 0.8em 1em;
+        height: 7.3em;
+        word-wrap: break-word;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .information span {
+        font-size: 80%;
+    }
+    .movies-result .view_more {
+        font-size: 90%;
+        margin: 1.4em 0 0 36% !important;
+        width: 96%;
+        color: red !important;
+    }
+    .app_tagline {
+        color: lightgreen;
+        font-size: 120%;
+        text-transform: uppercase;
+    }
+    .app_tagline .larger {
+        font-size: 135%;
+        /* font-family: serif; */
+    }
+    #movies_info_area {
+        position: absolute;
+        top: 0em;
+        z-index: 5;
+        width: 100%;
+        height: auto;
+        padding: 1em;
+        display: none;
+    }
+    #movies_info_area .movies-result {
+        height: auto !important; 
+    }
+    #movies_info_area .information {
+        height: auto;
+        margin: 0 0.8em 1em;
+        word-wrap: normal;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: initial;
+    }
+    .copyright {
+        position: absolute;
+        bottom: 0px; 
+        left: 50%;
+        margin-left: -25%;
+    }
+    #install-alert {
+        position: fixed;
+        bottom: 0em;
+        background: linear-gradient(to right, pink, hotpink, red);
+        padding: 0.3em 0.6em;
+        font-size: 80%;
+        font-family: Montserrat, sans-serif;
+        display: none;
+        transition: 400ms all linear;
+    }
+    #install-alert .main-tag {
+        font-size: 110%;
+        font-weight: bold;
+        font-family: Montserrat, sans-serif;
+        padding: 0 !important;
+        text-align: left;
+    }
+    #install-alert .tag {
+        font-weight: bold;
+        font-family: Montserrat, sans-serif;
+    }
+    #install-alert .fa {
+        font-size: 1.3em;
+    }
+    #install-alert img {
+        width: 3.5%;
+        height: auto;
+    }
+}

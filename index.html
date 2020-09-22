@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Icheka Fortune, Ozuru">
+  <!-- Icheka Fortune, Ozuru -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Finder PWA</title>
+  <link rel="icon" type="image/x-icon" href="assets/static/img/fav-icon144.png">
+  <!-- from files -->
+  <link rel="stylesheet" href="assets/static/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="assets/static/css/font-awesome/css/font-awesome.min.css" /> -->
+  <!-- cdn  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="assets/static/css/mobile.css">
+  <link rel="stylesheet" href="assets/static/css/desktop.css">
+
+  <link rel="manifest" href="manifest.json">
+  <!-- iPhone-aware PWA meta tags  -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- apple mobile web app status bar style  -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- apple mobile web app title  -->
+  <meta name="apple-mobile-web-app-title" content="iTube Lite">
+  <!-- splashscreens for iOS and iPadOS -->
+  <link href="iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <!-- I love you Mama, Ndaa, Igno, Ire, Ola, and my baby Princess  -->
+  <!-- I hope that someday I'll work at Google  -->
+</head>
+<body>
+  <div class="container p-0" ontouchstart="">
+    <div id="top">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark cc_cursor pt-3">
+          <a class="navbar-brand py-0 my-0" href="#" style="color: red; font-size: 120%;">
+            <div style="border-radius: 14px; background-color: rgb(32, 40, 61); border: 1px solid grey; display: inline-block; padding-left: 16px; padding-bottom: -2px; color: #efefef;">
+              i&nbsp;&nbsp;<span style="background-color: grey; border-radius: 13px; padding: 0.11em 0.7em 0.16em; color: darkred;">Tube</span></div> <br>
+              <!-- <span class="py-0 my-0" style="font-size: 60%;">MOVIE TRACKER</span> -->
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarsExample04">
+            <!-- <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-md-0">
+              <input class="form-control" type="text" placeholder="Search">
+            </form> -->
+          </div>
+        </nav><!--// top nav bar //-->
+      <div class="bg-base-1 py-2 border-0">
+          <div>
+              <div class="search-box bg-base-1 mt-3">
+                  <div class="app_tagline">Find, save and rate your <br> <span class="larger"> favourite movies</span></div>
+                  <!-- <div class="caption">Install this app by selecting "Add to home screen" on your iPhone, iPad or Android device <br /><u onclick="this.parentNode.style.display = 'none'">close</u></div> -->
+                  <div class="caption">
+                      Unlimited movies, TV series and documentaries.
+                  </div>
+                  <div class="text-secondary small">
+                    'Add to watchlist', 'Watch movie' and 'Save for offline': 
+                    <br /> <u>coming soon</u>
+                  </div>
+              </div>
+              <div class="search-box border-danger bg-base-1 mt-2">
+                  <input id="movies-search" class="col-10 border-0 bg-secondary" type="text" name="movies-search" placeholder="Find movies...">
+                  <span onclick="loadSearchMovies()" class="append col-1 border-0 text-white bg-highlight"><i class="fa fa-search"></i></span>
+                  <i id="search-loading-spinner" class="m-0 mt-2 text-secondary loading-spinner fa fa-spin fa-circle-o-notch fa-2x fa-stack-1x"></i>
+              </div>
+          </div>
+          <div id="search-dropdown" class="search-dropdown bg-highlight">
+              <div class="text-white cc_cursor" style="font-size: 80%;">Additional paramaters may help narrow your search:</div>
+              <div class="row cc_cursor">
+                  <label class="col-4">IMDb ID <input id="search-param-id" class="bg-highlight" type="text"></label>
+                  <label class="col-4">Year <input id="search-param-year" class="bg-highlight" type="text" maxlength="4"></label>
+                  <label class="col-4 cc_cursor">Type 
+                      <select id="search-param-type" class="bg-highlight text-white">
+                          <option value="none">None chosen</option>
+                          <option value="movie">Movie</option>
+                          <option value="series">Series</option>
+                          <option value="episode">Episode</option>
+                      </select>
+              </label>
+              </div>
+          </div>
+      </div>
+      <div id="content-area" class="m-0 pt-3 px-3 pb-3">
+          <div id="search_alert">
+          </div>
+          <div id="search-results" class="bg-base-1"><!-- { search results } -->
+            <div class="copyright text-secondary text-center">
+                Copyright <script>document.write(new Date().getFullYear())</script> &copy; Ozuru
+            </div>
+              <!-- <div class="movies-result col-12 col-sm-5 col-md-3">
+                  <img src="" alt="" />
+                  <div class="information">
+                      <div>Title: <span class="results-title"></span></div>
+                      <div>Year: <span class="results-year"></span>&nbsp;&nbsp;Rating: <span class="results-rating"></span></div>
+                      <div>Runtime: <span class="results-runtime"></span>&nbsp;&nbsp;</div>
+                      <div>Genre: <span class="results-genre"></span></div>
+                      <div>Plot: <span class="results-plot"></span></div>
+                      <div>Actors: <span class="results-actors"></span></div>
+                  </div>
+              </div> -->
+              <i id="home-loading-spinner" class="text-secondary loading-spinner fa fa-spin fa-circle-o-notch fa-2x fa-stack-1x"></i>
+          </div> <!--// search results //-->
+      </div>
+    </div>
+      <div id="movies_info_area" class="bg-base-1">
+          <i class="fa fa-caret-left fa-3x" style="color: red;" onclick="back_btn_more_info()"></i>
+          &nbsp;&nbsp;<span class="text-secondary ml-5 mb-3 mt-0" style="font-size: 140%;">
+        <div style="border-radius: 14px; background-color: red; display: inline-block; padding-left: 14px; padding-bottom: -2px;">
+            i&nbsp;<span style="background-color: grey; border-radius: 13px; padding: 0.09em 0.3em 0.12em; color: darkred;">Tube</span></div> <span class="small">by Icheka</span></span>
+          <div id="movies_info_content" class="mt-4">
+          </div>
+          <div class="sall text-muted">
+              Ratings are compiled based average user rating hence ratings might not always be accurate.
+              <br />
+              Love, <br /> Icheka :-)
+          </div>
+      </div>
+  </div>
+  <div id="install-alert" class="col-12">
+      <span class="main-tag">Install this app:</span><div onclick="this.parentNode.style.display = 'none';" class="text-right float-right d-inline-block"><i class="fa fa-close text-white"></i></div>
+      <br />
+      <span class="tag">On iPhone/iPad:</span> Tap the <img src="assets/static/img/iphone-share.png" alt="Tap To Share"> button, and tap 'Add to Home Screen'
+      <br />
+      <span class="tag">On Android:</span> Tap the <i class="fa fa-ellipsis-v"></i> buttton at the top-right corner of the Google Chrome browser display, select 'Add to Home Screen'
+  </div>
+  <script src="assets/static/js/main.js"></script>
+
+  <script>
+      (() => {
+          if ('serviceWorker' in navigator) {
+              navigator.serviceWorker.register('sw.js').then(() => {
+                console.log("SW registered.");
+              }).catch(err => {
+                window.location.reload();
+              });
+          }
+      })();
+  </script>
+</body>
+</html>

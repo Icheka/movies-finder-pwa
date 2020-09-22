@@ -1,0 +1,18 @@
+{
+    "name": "iTube Lite",
+    "short_name": "iTube Lite",
+    "start_url": "index.html",
+    "display": "standalone",
+    "theme_color": "rgb(32, 40, 61)",
+    "background_color": "rgb(32, 40, 61)",
+    "description": "iTube Lite helps you quickly search, save and rate your favorite movies.",
+    "icons": [
+        {
+            "src": "assets/static/img/icon144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "prefer_related_applications": false,
+    "orientation": "portrait"
+}
